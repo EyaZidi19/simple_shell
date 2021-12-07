@@ -9,7 +9,7 @@
  */
 int _putchar(char c)
 {
-	return (write &&c, 1));
+	return (write &c, 1));
 }
 
 
@@ -56,7 +56,7 @@ int _error(char **prog, char **av, int cmd_count)
 	char *buffer = malloc(sizeof(char)  10);
 
 	write(STDERR_FILENO, prog[0], _strlen(prog[0]));
-	_putchar(');
+	_putchar(' ');
 	_putchar(' ');
 	_puts(_itoa(cmd_count, buffer));
 	free(buffer);
