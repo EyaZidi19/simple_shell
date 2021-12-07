@@ -27,3 +27,20 @@ void _puts(char *s)
 		s++;
 	}
 }
+
+
+/**
+ * _env - prints the current environment
+ * Return: void
+ */
+void _env(void)
+{
+	int i = 0;
+
+	while (environ[i])
+	{
+		write(STDOUT_FILENO, environ[i], _strlen(environ[i]));
+		_putchar('\n');
+		i++;
+	}
+}
