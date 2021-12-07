@@ -4,6 +4,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * struct cmd - struct to pass different arguments to different functions
+ * @argc: number of arguments
+ * @argv: commands entered
+ * @av: parsed commands
+ * @cmd_count: current count of commands entered
+ */
+typedef struct cmd
+{
+	int argc;
+	char **argv;
+	char **av;
+	int cmd_count;
+} cmd;
 
 /**
  * struct envvar - struct to pass environment information
