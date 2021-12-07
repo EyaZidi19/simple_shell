@@ -53,10 +53,10 @@ void _env(void)
  */
 int _error(char **prog, char **av, int cmd_count)
 {
-	char *buffer = malloc(sizeof(char) * 10);
+	char *buffer = malloc(sizeof(char)  10);
 
 	write(STDERR_FILENO, prog[0], _strlen(prog[0]));
-	_putchar(':');
+	_putchar(');
 	_putchar(' ');
 	_puts(_itoa(cmd_count, buffer));
 	free(buffer);
