@@ -1,0 +1,53 @@
+.TH SIMPLE_SHELL 1 "12/7/2021" "VERSION 1.0" "simple_shell man page"
+
+.SH NAME
+.B simple_shell
+- Simple shell create in C to interact with a linux operating system.
+
+.SH SYNOPSIS
+ hsh [options] [file]
+ 
+ .SH DESCRIPTION
+.B simple_shell 
+is a simple UNIX command line interpreter. 
+It displays a prompt and waits for user to type a command. 
+Prompt is displayed again each time a command has been executed. 
+This shell has limited features so no piping, redirection, aliases, expansion, and no arguments passed to programs. 
+If executable cannot be found, error message is printed and prompt displayed again.
+.PP
+Uses spaces as delimiter between each argument. Common flags are interpreted. 
+.PP
+Can be invoked by typing ./hsh
+
+
+.SH EXAMPLE
+Invocate interactive mode by typing ./hsh in terminal. The prompt will ask for input. By typing 
+.I /bin/ls 
+or
+.I ls
+into the terminal, the contents of the current directory should be displayed.
+This shell can also be used in non-interactive mode by piping commands into it as such:
+.I echo "ls" | ./hsh
+
+.SH EXIT STATUS
+If the shell is in non-interactive mode, the execution of the shell file will be aborted.
+If the shell exits with error, it will be a non-zero exit status. Otherwise it will return the exit status of the last command executed, or an exit status can be appended by the user 
+.I exit (number).
+
+.SH ENVIRONMENT
+.PP 
+.B HOME 
+- Set automatically by login from the user's login directory in the password (passwd(4)) file. 
+.PP
+.B PATH 
+- The default search path for executables.
+.PP
+.B PS1
+- The primary prompt string which defaults to "$ ".
+
+.SH SEE ALSO
+sh(1)
+.SH AUTHORS
+Eya Zidi<3805@holbertonschool.com>
+.br
+Fedi Chihaoui<3679@holbertonschool.com>
