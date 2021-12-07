@@ -11,3 +11,19 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+
+
+/**
+ * _puts - prints a string
+ * @s: string to print
+ * Return: void
+ */
+void _puts(char *s)
+{
+	while (*s)
+	{
+		_putchar(*s);
+		s++;
+	}
+}
