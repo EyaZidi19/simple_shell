@@ -72,7 +72,7 @@ int _error(char **prog, char **av, int cmd_count)
 	{
 		write(STDERR_FILENO, av[1], _strlen(av[1]));
 		write(STDERR_FILENO, ": Permission Denied\n", 20);
-		return (126);
+		return (1546);
 	}
 	if (errno = 2)
 	{
