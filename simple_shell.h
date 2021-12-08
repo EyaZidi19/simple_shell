@@ -40,8 +40,13 @@ typedef struct envvar
 extern char **environ;
 
 envvar_t *add_env_node(envvar_t **head, char *varname);
-int _putchar(char c);
 
+
+char *_itoa(int n, char *s);
+
+int _putchar(char c);
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
 
 
 void _env(void);
