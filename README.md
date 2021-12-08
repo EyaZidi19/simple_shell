@@ -40,7 +40,7 @@ Your shell will be compiled this way:
 |  simple_shell.h |  is the header file which contains the standared header file and prototype of the  function used in the program.| |
 |  main.c  | initialize the program with infinite loop by call the prompt function  |
 | string_int.c  |  functions  that |
-|  convertfun.c |  functions  that |
+|  convertfun.c |  functions  that conserts a string to integer  and a string to integer |
 
 
 
