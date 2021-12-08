@@ -60,10 +60,17 @@ $ /bin/pwd for display the current directory address
 
 ##     :tw-1f4cc: files   
 
-|README.md          | description about the project repo  |
-|man_1_simple_shell | is the man page for the shell we are going to write.  |
-|  AUTHORS          | file at the root of your repository, listing all individuals having contributed content to the repository.
-|simple_shell.h     | is the header file which contains the standared header file and prototype of the  function used in the program.
-|  main.c           | initialize the program with infinite loop by call the prompt function|
-|string_int.c       |  functions that   |
-|convertfun.c       | functions  that |
+|files |  description|
+| ------------ |
+|README.md  | description about the project repo  |
+| man_1_simple_shell | is the man page for the shell we are going to write.  |
+|  AUTHORS  | file at the root of your repository, listing all individuals having contributed content to the repository.|
+|simple_shell.h | is the header file which contains the standared header file and prototype of the  function used in the program.|
+|  main.c | initialize the program with infinite loop by call the prompt function|
+|string_int.c|  functions that   |
+|convertfun.c| functions  that |
+
+
+
+
+
