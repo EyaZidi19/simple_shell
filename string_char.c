@@ -115,7 +115,6 @@ char *_strdup(char *str)
 	len = i;
 
 	result = (char *)_calloc((len + 1), sizeof(char));
-	/* result = malloc(sizeof(char) * (len + 1));*/
 	if (result == NULL)
 		return (NULL);
 
