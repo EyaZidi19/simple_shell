@@ -1,4 +1,5 @@
 #include "simple_shell.h"
+
 /**
  * main - entrypoint to simple_shell
  *
@@ -17,7 +18,7 @@ int main(int __attribute__((unused))ac, char *argv[])
 	signal(SIGINT, sigintHandler);
 	while (1)
 	{
-        if (isatty(STDIN_FILENO))
+		if (isatty(STDIN_FILENO))
 			write(STDERR_FILENO, "$ ", 2);
 		cmd_count++;
 		gl = getline(&lineptr, &n, stdin);
@@ -49,6 +50,7 @@ int main(int __attribute__((unused))ac, char *argv[])
 	}
 	return (0);
 }
+
 /**
  * _execute - executes commands from main function
  * @argv: argument from command line
@@ -101,18 +103,6 @@ int _execute(char *argv[], char **command, int cmd_count)
 }
 
 /**
- * sigintHandler - handles Ctrl+C
- * @signo: signal to handle
- * Return: void
- */
-void sigintHandler(int signo)
-{
-	signal(SIGINT, sigintHandler);
-	(void)signo;
-	write(STDERR_FILENO, "\n$ ", 3);
-	fflush(stdout);
-}
-/**
  * exit_handler - handles exit
  * @prog: program
  * @command: exit number
@@ -141,4 +131,17 @@ void exit_handler(char **prog, char **command, int cmd_count, int exit_status)
 		ffree(command);
 		exit(a);
 	}
+}
+
+/**
+ * sigintHandler - handles Ctrl+C
+ * @signo: signal to handle
+ * Return: void
+ */
+void sigintHandler(int signo)
+{
+	signal(SIGINT, sigintHandler);
+	(void)signo;
+	write(STDERR_FILENO, "\n$ ", 3);
+	fflush(stdout);
 }

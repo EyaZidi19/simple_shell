@@ -1,13 +1,13 @@
-.TH SIMPLE_SHELL 1 "12/7/2021" "VERSION 1.0" "simple_shell man page"
+.TH SIMPLE_SHELL 1 "11 December 2021" "VERSION 1.0" "simple_shell man page"
 
 .SH NAME
-.B simple_shell
-- Simple shell create in C to interact with a linux operating system.
+simple_shell \- Simple command interpreter (shell)
 
 .SH SYNOPSIS
- hsh [options] [file]
- 
- .SH DESCRIPTION
+.B hsh
+[options][file]
+
+.SH DESCRIPTION
 .B simple_shell 
 is a simple UNIX command line interpreter. 
 It displays a prompt and waits for user to type a command. 
@@ -18,7 +18,6 @@ If executable cannot be found, error message is printed and prompt displayed aga
 Uses spaces as delimiter between each argument. Common flags are interpreted. 
 .PP
 Can be invoked by typing ./hsh
-
 
 .SH EXAMPLE
 Invocate interactive mode by typing ./hsh in terminal. The prompt will ask for input. By typing 
@@ -47,7 +46,8 @@ If the shell exits with error, it will be a non-zero exit status. Otherwise it w
 
 .SH SEE ALSO
 sh(1)
+
 .SH AUTHORS
-Eya Zidi<3805@holbertonschool.com>
+Eya Zidi 3805@holbertonschool.com
 .br
-Fedi Chihaoui<3679@holbertonschool.com>
+Fedi Chihaoui 3679@holbertonschool.com
