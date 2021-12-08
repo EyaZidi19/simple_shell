@@ -53,3 +53,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	return (s);
 }
+void ffree(char **pp)
+{
+	char **a = pp;
+
+	if (!pp)
+		return;
+	while (*pp)
+		free(*pp++);
+	free(a);
+}
