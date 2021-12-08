@@ -82,6 +82,8 @@ $ /bin/pwd for display the current directory address
 
 
 
-
+:tw-1f4cc:   AUTHORS   :fa-users:
+Eya Zidi<3805@holbertonschool.com>
+Fedi Chihaoui<3679@holbertonschool.com>
 
 
