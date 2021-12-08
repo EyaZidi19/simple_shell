@@ -15,3 +15,23 @@ void rm_nl(char **lineptr)
 		i++;
 	ptr[i] = '\0';
 }
+char *_getenv(char *name)
+{
+	int i = 0;
+
+	while (environ[i])
+	{
+		char *haystack = environ[i];
+		char *needle = name;
+
+		while (*haystack == *needle)
+		{
+			haystack++;
+			needle++;
+		}
+		if (*needle == '\0')
+			return (haystack + 1);
+		i++;
+	}
+	return (NULL);
+}
