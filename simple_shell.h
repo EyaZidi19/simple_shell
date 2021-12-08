@@ -9,7 +9,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-
+#define ILLNUM 227
+#define TOK_DELIM " \t\a"
 /**
  * struct cmd - struct to pass different arguments to different functions
  * @argc: number of arguments
