@@ -1,4 +1,4 @@
-#  *:tw-1f4a5:  simple_shell*   :tw-1f528: :tw-1f527: :tw-1f465:  
+#  *:tw-1f4a5:    simple_shell*     :tw-1f528: :tw-1f527: :tw-1f465:  
 This project consists in the creation of a simple shell that will allow the user to interact with the system using commands.
 
 It handles the PATH to find the programs it will execute. It will use the execve() system call to perform the commands. The execution of the programs will be done under children processes using fork(). CTRL+C won't close the program, with the command exit close the shell.
