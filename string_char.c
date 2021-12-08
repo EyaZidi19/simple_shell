@@ -1,4 +1,6 @@
 #include "simple_shell.h"
+
+
 /**
  * word_count - counts words because split_line is bad at arithmetic
  * @s: string to count
@@ -21,9 +23,14 @@ int word_count(char *s)
 		}
 	}
 	return (count);
-} 
+}
 
 
+/**
+ * split_line - tokenizes input string at spaces
+ * @line: string to split
+ * Return: pointer to array of split strings
+ */
 char **split_line(char *line)
 {
 	int i = 0;
@@ -61,6 +68,13 @@ char **split_line(char *line)
 	return (words);
 }
 
+
+/**
+ * str_concat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: NULL on failure, or pointer to newly allocated space in memory
+ */
 char *str_concat(char *s1, char *s2)
 {
 	unsigned int len1, len2, i, j = 0;
@@ -100,6 +114,11 @@ char *str_concat(char *s1, char *s2)
 }
 
 
+/**
+ * _strdup - returns a pointer to a newly allocated space in memory
+ * @str: string to copy
+ * Return: pointer to allocated space
+ */
 char *_strdup(char *str)
 {
 	char *result = NULL;
@@ -115,15 +134,23 @@ char *_strdup(char *str)
 	len = i;
 
 	result = (char *)_calloc((len + 1), sizeof(char));
+	/* result = malloc(sizeof(char) * (len + 1));*/
 	if (result == NULL)
 		return (NULL);
 
-	for (i = 0; i < len; i+)
+	for (i = 0; i < len; i++)
 		*(result + i) = *(str + i);
 
 	return (result);
 }
 
+
+/**
+ * _strstr - locates a substring
+ * @haystack: string to check
+ * @needle: substring to look for
+ * Return: pointer to beginning of located substring, or NULL
+ */
 char *_strstr(char *haystack, char *needle)
 {
 	while (*haystack)
@@ -131,7 +158,7 @@ char *_strstr(char *haystack, char *needle)
 		char *begin = haystack;
 		char *pattern = needle;
 
-		while (*haystack && *pattern && *haystack = *pattern)
+		while (*haystack && *pattern && *haystack == *pattern)
 		{
 			haystack++;
 			needle++;
@@ -143,4 +170,3 @@ char *_strstr(char *haystack, char *needle)
 	}
 	return (NULL);
 }
-
