@@ -99,3 +99,16 @@ int _execute(char *argv[], char **command, int cmd_count)
 	}
 	return (exit_status);
 }
+
+/**
+ * sigintHandler - handles Ctrl+C
+ * @signo: signal to handle
+ * Return: void
+ */
+void sigintHandler(int signo)
+{
+	signal(SIGINT, sigintHandler);
+	(void)signo;
+	write(STDERR_FILENO, "\n$ ", 3);
+	fflush(stdout);
+}
