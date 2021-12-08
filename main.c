@@ -49,3 +49,53 @@ int main(int __attribute__((unused))ac, char *argv[])
 	}
 	return (0);
 }
+/**
+ * _execute - executes commands from main function
+ * @argv: argument from command line
+ * @command: parsed command array
+ * @cmd_count: count of commands in session
+ * Return: exit status of child
+ */
+int _execute(char *argv[], char **command, int cmd_count)
+{
+	pid_t childpid;
+	int status, exit_status = 0;
+	char *shcmd = command[0];
+
+	childpid = fork();
+	if (childpid == -1)
+	{
+		perror("Child process failed.");
+		exit(EXIT_FAILURE);
+	}
+	if (childpid == 0)
+	{
+		signal(SIGINT, SIG_DFL);
+		if (*command[0] != '/')
+			command[0] = _which(command[0]);
+		if (command[0] == NULL)
+			command[0] = shcmd;
+		else
+			shcmd = NULL;
+		if (execve(command[0], command, NULL) < 0)
+		{
+			if (errno == 2)
+			{
+				exit_status = _error(argv, &shcmd, cmd_count);
+				ffree(command);
+				_exit(127);
+			}
+			ffree(command);
+			_exit(127);
+		}
+	}
+	else
+	{
+		wait(&status);
+		ffree(command);
+		if (WIFEXITED(status))
+			WEXITSTATUS(status);
+		exit_status = WEXITSTATUS(status);
+	}
+	return (exit_status);
+}
