@@ -1,6 +1,5 @@
 #include "simple_shell.h"
 
-
 /**
  * iscmd - check if file is an executable
  * @filename: filename as char pointer
@@ -38,6 +37,7 @@ int _strcmp(char *s1, char *s2)
 	else
 		return (*s1 - *s2);
 }
+
 /**
  * _strlen - returns the length of a string
  * @s: char to check
