@@ -112,3 +112,33 @@ void sigintHandler(int signo)
 	write(STDERR_FILENO, "\n$ ", 3);
 	fflush(stdout);
 }
+/**
+ * exit_handler - handles exit
+ * @prog: program
+ * @command: exit number
+ * @cmd_count: current command count
+ * @exit_status: status of last command
+ */
+void exit_handler(char **prog, char **command, int cmd_count, int exit_status)
+{
+	long int a = 0;
+
+	a = command[1] ? _atoi(command[1]) : 2;
+	if (command[1] == NULL)
+	{
+		ffree(command);
+		exit(exit_status);
+	}
+
+	if (a > 2147483647 || a < 0)
+	{
+		errno = 0;
+		_error(prog, command, cmd_count);
+		ffree(command);
+	}
+	else
+	{
+		ffree(command);
+		exit(a);
+	}
+}
