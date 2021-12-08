@@ -36,7 +36,7 @@ Your shell will be compiled this way:
 | ------------ | ------------ |
 |   ; |  Separates commands into command lists that can be executed unconditionally (doesn't depend on the failure or success of the previous command) |
 |  && |  Executes the next command in a command list if the previous command succeeded (had an exit code of 0) |
-| ||  | 	Executes the next command in a command list if the previous command failed (had a non-zero exit code)  |
+|  | 	Executes the next command in a command list if the previous command failed (had a non-zero exit code)  |
 ### 
 
 ------------
@@ -49,6 +49,7 @@ Your shell will be compiled this way:
 our program have the same output as sh
 
 Example:
+
 $ ls use path for list the files
 
 $ echo l use path for found echo and execute file
