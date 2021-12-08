@@ -81,9 +81,9 @@ $ /bin/pwd for display the current directory address
  | | 	Executes the next command in a command list if the previous command failed (had a non-zero exit code)  |
 
 
-
-:tw-1f4cc:   AUTHORS   :fa-users:
+### :tw-1f4cc:   AUTHORS   :fa-users:
 Eya Zidi<3805@holbertonschool.com>
 Fedi Chihaoui<3679@holbertonschool.com>
+
 
 
