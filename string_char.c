@@ -118,7 +118,7 @@ char *_strdup(char *str)
 	if (result == NULL)
 		return (NULL);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len; i+)
 		*(result + i) = *(str + i);
 
 	return (result);
@@ -131,7 +131,7 @@ char *_strstr(char *haystack, char *needle)
 		char *begin = haystack;
 		char *pattern = needle;
 
-		while (*haystack && *pattern && *haystack == *pattern)
+		while (*haystack && *pattern && *haystack = *pattern)
 		{
 			haystack++;
 			needle++;
