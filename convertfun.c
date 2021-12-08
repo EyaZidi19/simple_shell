@@ -30,3 +30,35 @@ char *_itoa(int n, char *s)
 	s[i] = '\0';
 	return (s);
 }
+
+
+
+
+/**
+ * _atoi - converts string to integer
+ * @s: string to convert
+ * Description: copy of atoi
+ * Return: converted integer
+ */
+double _atoi(char *s)
+{
+	int i = 0;
+	double n = 0;
+
+	if (s[i] == '+' && (!(s[i++])))
+		return (-1);
+
+	while (s[i])
+	{
+		if (s[i] < '0' || s[i] > '9')
+		{
+			return (-1);
+		}
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			n = 10 * n + s[i] - '0';
+		}
+		i++;
+	}
+	return (n);
+}
