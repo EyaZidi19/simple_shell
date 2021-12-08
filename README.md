@@ -30,7 +30,7 @@ Your shell will be compiled this way:
 
     gcc -Wall -Werror -Wextra -pedantic -std=gnu89 _.c -o hsh
 
-### :tw-1f4cc:  Supported Control Operators :tw-1f4d7:
+##     :tw-1f4cc: files 
 
 |  files  |  description |
 | ------------ | ------------ |
@@ -71,17 +71,9 @@ $ /bin/ls for list the files in the current directory or
 
 $ /bin/pwd for display the current directory address
 
-##     :tw-1f4cc: files   
+  
 
-|files |  description|
-| ------------ |
-|README.md  | description about the project repo  |
-| man_1_simple_shell | is the man page for the shell we are going to write.  |
-|  AUTHORS  | file at the root of your repository, listing all individuals having contributed content to the repository.|
-|simple_shell.h | is the header file which contains the standared header file and prototype of the  function used in the program.|
-|  main.c | initialize the program with infinite loop by call the prompt function|
-|string_int.c|  functions that   |
-|convertfun.c| functions  that |
+
 
 
 
