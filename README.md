@@ -32,11 +32,24 @@ Your shell will be compiled this way:
 
 ### :tw-1f4cc:  Supported Control Operators :tw-1f4d7:
 
-| Operator  |Description   |
+|  files  |  description |
 | ------------ | ------------ |
-|   ; |  Separates commands into command lists that can be executed unconditionally (doesn't depend on the failure or success of the previous command) |
-|  && |  Executes the next command in a command list if the previous command succeeded (had an exit code of 0) |
-|  | 	Executes the next command in a command list if the previous command failed (had a non-zero exit code)  |
+| README.md   | description about the project repo  |
+| man_1_simple_shell  |  is the man page for the shell we are going to write.  |
+|  AUTHORS |  file at the root of your repository, listing all individuals having contributed content to the repository. |
+|  simple_shell.h |  is the header file which contains the standared header file and prototype of the  function used in the program.| |
+|  main.c  | initialize the program with infinite loop by call the prompt function  |
+| string_int.c  |  functions  that |
+|  convertfun.c |  functions  that |
+
+
+
+
+
+
+
+
+
 ### 
 
 ------------
