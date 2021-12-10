@@ -24,7 +24,7 @@ simple_shell works very similarily to the Bourne shell. simple_shell will read i
 To start simple_shell in Interactive Mode type:
 ` ./hsh`
 
-## 🥇  Compilation:tw-1f4d5:
+## 🥇  Compilation
 
 Your shell will be compiled this way:
 
@@ -80,7 +80,7 @@ $ /bin/pwd for display the current directory address
 | ------------ | ------------ |
 |   ; |  Separates commands into command lists that can be executed unconditionally (doesn't depend on the failure or success of the previous command) |
 |  && |  Executes the next command in a command list if the previous command succeeded (had an exit code of 0) |
- |||  | 	Executes the next command in a command list if the previous command failed (had a non-zero exit code)  |
+ | ||  | 	Executes the next command in a command list if the previous command failed (had a non-zero exit code)  |
 
 
 ### ✍️   AUTHORS   
